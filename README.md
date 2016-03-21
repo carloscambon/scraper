@@ -2,20 +2,6 @@
 
 Project to scrape a Sainsbury’s grocery site - Ripe Fruits page and returns a JSON array of all the products on the page.
 
-## Quick start
-
-You can download the latest version here [link] and use it from the command line:
-
-```
-java -jar scraper-[version].jar urlToScrape
-```
-
-Example:
-
-```
-java -jar scraper-1.0.jar http://hiring-tests.s3-website-eu-west-1.amazonaws.com/2015_Developer_Scrape/5_products.html
-```
-
 ## Installation on your IDE
 
 Clone the repository:
@@ -40,3 +26,16 @@ To release a new version execute the following maven command:
 mvn clean compile assembly:single
 ```
 
+## Running the console application
+
+Create a release as above and run the jar generated in "target" folder as:
+
+```
+java -jar scraper-[version].jar urlToScrape
+```
+
+Example:
+
+```
+java -jar scraper-1.0.jar http://hiring-tests.s3-website-eu-west-1.amazonaws.com/2015_Developer_Scrape/5_products.html
+```
