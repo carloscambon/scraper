@@ -2,28 +2,38 @@ package com.sainsbury.test.scraper.beans;
 
 import java.util.List;
 
-public class ProductsResponse  {
+/**
+ * Bean to hold the Sainsbury product list and the total sum of the unit_price
+ * of each product on the list
+ * 
+ * @author Carlos Cambon
+ *
+ */
+public class ProductsResponse {
+	private List<Product> results;
+	private float total = 0f;
 
-    public ProductsResponse(List<Product> results) {
-        this.results = results;
-        calculateTotal();
-    }
+	public ProductsResponse() {
 
-    private void calculateTotal() {
-        for (Product product : results) {
-            total += product.getUnit_price();
-        }
-    }
+	}
 
-    private List<Product> results;
-    private float total = 0f;
+	public ProductsResponse(List<Product> results) {
+		this.results = results;
+		calculateTotal();
+	}
 
-    public float getTotal() {
-        return total;
-    }
+	private void calculateTotal() {
+		for (Product product : results) {
+			total += product.getUnit_price();
+		}
+	}
 
-    public List<Product> getResults() {
-        return results;
-    }
-    
+	public float getTotal() {
+		return total;
+	}
+
+	public List<Product> getResults() {
+		return results;
+	}
+
 }
